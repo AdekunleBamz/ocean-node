@@ -21,33 +21,31 @@ ICON_EXIT="❌"
 ICON_CHANGE_RPC="🔄"  # New Icon for Change RPC
 
 # Functions to draw borders and display menu
-#!/bin/bash
-
-# Define color codes
-RED="\033[0;31m"
-GREEN="\033[0;32m"
-BLUE="\033[0;34m"
-YELLOW="\033[0;33m"
-MAGENTA="\033[0;35m"
-CYAN="\033[0;36m"
-WHITE="\033[0;37m"
-RESET="\033[0m"
-
-# Store colors in an array for randomization
-colors=("$RED" "$GREEN" "$BLUE" "$YELLOW" "$MAGENTA" "$CYAN" "$WHITE")
-
-# Function to pick a random color
-random_color() {
-    echo "${colors[RANDOM % ${#colors[@]}]}"
+# Functions to draw borders and display menu
+draw_top_border() {
+    echo -e "${CYAN}╔══════════════════════════════════════════════════════╗${RESET}"
 }
 
-# Display the ASCII art with random colors
-echo -e "    $(random_color)    ___    _           __________      __  ___  ___  __ ${RESET}"
-echo -e "    $(random_color)   / __\\  /_\\    /\\/\\ / _  / _  /   /\\ \\ \\/___\\/   \\/__\\${RESET}"
-echo -e "    $(random_color)  /__/\\// //_\\\\  /    \\\\// /\\// /   /  \\/ //  // /\\ /_\\  ${RESET}"
-echo -e "    $(random_color) / \\/  \\/  _  \\/ /\\/\\ \\/ //\\/ //\\ / /\\  / \\_// /_///__  ${RESET}"
-echo -e "    $(random_color) \\_____/\\_/ \\_/\\/    \\/____/____/ \\_\\ \\/\\___/___,'\\__/  ${RESET}"
-echo -e "    $(random_color)                                                      ${RESET}"
+draw_middle_border() {
+    echo -e "${CYAN}╠══════════════════════════════════════════════════════╣${RESET}"
+}
+
+draw_bottom_border() {
+    echo -e "${CYAN}╚══════════════════════════════════════════════════════╝${RESET}"
+}
+
+print_telegram_icon() {
+    echo -e "          ${MAGENTA}${ICON_TELEGRAM} Follow us on Telegram!${RESET}"
+}
+
+display_ascii() {
+echo -e "    ${RED}    ___    _           __________      __  ___  ___  __ ${RESET}"
+echo -e "    ${GREEN}   / __\\  /_\\    /\\/\\ / _  / _  /   /\\ \\ \\/___\\/   \\/__\\${RESET}"
+echo -e "    ${BLUE}  /__/\\// //_\\\\  /    \\\\// /\\// /   /  \\/ //  // /\\ /_\\  ${RESET}"
+echo -e "    ${YELLOW} / \\/  \\/  _  \\/ /\\/\\ \\/ //\\/ //\\ / /\\  / \\_// /_///__  ${RESET}"
+echo -e "    ${MAGENTA} \\_____/\\_/ \\_/\\/    \\/____/____/ \\_\\ \\/\\___/___,'\\__/  ${RESET}"
+echo -e "    ${RESET}                                                      ${RESET}"
+}
 
 # Function to get IP address
 get_ip_address() {

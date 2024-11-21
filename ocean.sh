@@ -48,7 +48,6 @@ echo -e "    $(random_color)  /__/\\// //_\\\\  /    \\\\// /\\// /   /  \\/ // 
 echo -e "    $(random_color) / \\/  \\/  _  \\/ /\\/\\ \\/ //\\/ //\\ / /\\  / \\_// /_///__  ${RESET}"
 echo -e "    $(random_color) \\_____/\\_/ \\_/\\/    \\/____/____/ \\_\\ \\/\\___/___,'\\__/  ${RESET}"
 echo -e "    $(random_color)                                                      ${RESET}"
-}
 
 # Function to get IP address
 get_ip_address() {

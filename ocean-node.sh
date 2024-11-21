@@ -21,7 +21,6 @@ ICON_EXIT="❌"
 ICON_CHANGE_RPC="🔄"  # New Icon for Change RPC
 
 # Functions to draw borders and display menu
-# Functions to draw borders and display menu
 draw_top_border() {
     echo -e "${CYAN}╔══════════════════════════════════════════════════════╗${RESET}"
 }
@@ -64,7 +63,7 @@ show_menu() {
     display_ascii
     draw_middle_border
     print_telegram_icon
-    echo -e "    ${BLUE}Subscribe to our channel: ${YELLOW}https://t.me/dknodes${RESET}"
+    echo -e "    ${BLUE}Subscribe to our channel: ${YELLOW}https://t.me/BamzzNodes${RESET}"
     draw_middle_border
 
     # Display current working directory and IP address
